@@ -5,18 +5,26 @@
 	<LinearLayout android:orientation="horizontal"
 		android:gravity="center" android:layout_width="fill_parent"
 		android:layout_height="wrap_content">
-		<Button android:id="@+id/buttonFirst" android:layout_width="0dip"
-			android:layout_weight="1" android:layout_height="wrap_content"
-			android:onClick="onClick"
-			android:text="１番目" />
-		<Button android:id="@+id/buttonSecond" android:layout_width="0dip"
-			android:layout_weight="1" android:layout_height="wrap_content"
-			android:onClick="onClick"
-			android:text="２番目" />
-		<Button android:id="@+id/buttonThird" android:layout_width="0dip"
-			android:layout_weight="1" android:layout_height="wrap_content"
-			android:onClick="onClick"
-			android:text="３番目" />
+		<RadioGroup
+			android:id="@+id/radioGroupTabs"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal">
+			<RadioButton android:id="@+id/buttonFirst"
+				android:layout_width="0dip" android:layout_weight="1"
+				android:layout_height="50dip" android:onClick="onClick"
+				android:text="１番目" android:button="@drawable/button_stateful"
+				android:background="@drawable/button_stateful" android:gravity="center" />
+			<RadioButton android:id="@+id/buttonSecond"
+				android:layout_width="0dip" android:layout_weight="1"
+				android:layout_height="50dip" android:background="@drawable/button_stateful"
+				android:onClick="onClick" android:text="２番目" android:button="@drawable/button_stateful"
+				android:gravity="center" />
+			<RadioButton android:id="@+id/buttonThird"
+				android:layout_width="0dip" android:layout_weight="1"
+				android:layout_height="50dip" android:background="@drawable/button_stateful"
+				android:onClick="onClick" android:text="３番目" android:button="@drawable/button_stateful"
+				android:gravity="center" />
+		</RadioGroup>
 	</LinearLayout>
 	<android.support.v4.view.ViewPager
 		android:id="@+id/viewPagerMain" android:layout_width="fill_parent"
